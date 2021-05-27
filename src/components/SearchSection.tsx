@@ -8,7 +8,7 @@ function Search() {
 
   const searchMusic = async (search: string) => {
     const res = await fetch(
-      `https://spotify-fetch.herokuapp.comhttps://api.deezer.com/search?q=${search}`
+      `https://spotify-fetch.herokuapp.com/https://api.deezer.com/search?q=${search}`
     );
     const results = await res.json();
     setSearchResults(results.data);
