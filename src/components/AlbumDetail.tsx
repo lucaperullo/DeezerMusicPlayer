@@ -10,7 +10,9 @@ function AlbumDetail() {
   const [playlist, setPlaylist] = useState([]);
   const { id } = useParams<{ id?: string }>();
   const fetchAlbum = async () => {
-    const res = await fetch(`https://api.deezer.com/album/${id}`);
+    const res = await fetch(
+      `https://spotify-fetch.herokuapp.comhttps://api.deezer.com/album/${id}`
+    );
     const data = await res.json();
     setAlbum(data);
     console.log(data.tracks);
